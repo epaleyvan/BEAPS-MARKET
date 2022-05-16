@@ -144,3 +144,37 @@ a.small{
 
 
 /* END LOGIN */
+
+
+/* CART */
+
+.cartPage{
+	position: relative;
+	margin-top: 100px;
+	min-height: 70vh;
+}
+.cartPage h4{
+	 color: #413152;
+	 text-align: center;
+	 padding: 10px;
+}
+
+.cartPage .pay{
+position: absolute;
+bottom: 5%;
+right: 5%;
+}
+.cartPage .pay h4,.cartPage .pay h5{
+	text-align: center;
+}
+.cartPage .pay button{
+	border: none;
+	background: #DF6B48;
+	color: #fff;
+	border-radius: 25px;
+	text-align: center;
+	padding: 10px;
+	font-size: 1em;
+}
+
+/* END CART */
