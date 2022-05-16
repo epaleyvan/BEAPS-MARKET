@@ -40,3 +40,107 @@
 .row.vertical{
     flex-direction: column;
 }
+
+/* LOGIN PAGE */
+.login-container {
+	position: relative;
+	height: 80vh;
+	background: #413152;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 10%;
+    margin-top: 100px;
+}
+
+.login-container .left{
+	position: relative;
+	height: 80%;
+}
+.login-container .left p{
+	text-align: left;
+	color: #fff;
+}
+.login-container .left h3{
+	color: #fff !important;
+}
+.login-container .right{
+	position: relative;
+	height: 80%;
+}
+.login-container .right .Box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+	width: 400px;
+	background: #fff;
+	padding: 10% 20%;
+	overflow: hidden;
+	z-index: 1;
+}
+.login-container .right .Box input:nth-child(1){
+	margin-top: 30%;
+}
+.login-container .right .Box input{
+	position: relative;
+	margin: 15px 0;
+	border: none;
+	border-bottom: 2px solid #413152;
+	padding: 10px;
+	background: transparent;
+	width: 100%;
+}
+
+.login-container .right .Box button{
+	margin-top: 15px;
+	background: transparent;
+	border: 2px solid #413152;
+	border-radius: 25px;
+	font-size: 1em;
+	padding: 10px 15px;
+	cursor: pointer;
+	outline: none;
+}
+.login-container .right .Box:before{
+	content: "";
+	position: absolute;
+	top:-10%;
+	left: 50%;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(19, 173, 244);
+    transform: skewY(15%);
+	border-radius: 70%;
+	transform: rotate(60deg);
+	z-index: -1;
+
+}
+.login-container .right .Box::after{
+	content: "";
+	position: absolute;
+	top:-20%;
+	left: 40%;
+	height: 120%;
+	width: 120%;
+	background-color: rgb(72, 248, 160);
+	border-radius: 70%;
+	transform: rotate(60deg);
+	z-index: -2;
+
+}
+
+li a.on{
+    color: #DF6B48;
+}
+a.small{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* END LOGIN */
