@@ -12,3 +12,31 @@
 .service--bordered{
     box-shadow: 5px 5px 3px rgba(51, 51, 51, 0.2);
 }
+
+/*--------------------------------------------------------------
+# Détails
+--------------------------------------------------------------*/
+.btn-standard{
+    background-color: #DF6B48;
+    color: white;
+    display: inline-block;
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    padding: 0.35vw;
+}
+.btn-standard:hover{
+    background-color: #413152;
+    color: white;
+}
+.btn-standard:active, .btn-standard:focus, .btn-standard--clicked{
+    background-color: #413152;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
+}
+.btn--rounded{
+    border-radius: 2vw;
+}
+.row.vertical{
+    flex-direction: column;
+}
