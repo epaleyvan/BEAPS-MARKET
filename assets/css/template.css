@@ -294,6 +294,7 @@ body {
   overflow: hidden;
   position: relative;
   background: url("/assets/img/image_3.jpg");
+  background: url("../img/image_3.jpg");
   background-position: center 35%;
   background-size: cover;
   padding: 0;
