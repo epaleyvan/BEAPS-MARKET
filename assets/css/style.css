@@ -42,19 +42,25 @@
 }
 
 /* LOGIN PAGE */
-.login-container {
-	position: relative;
-	height: 80vh;
+
+.login-section{
 	background: #413152;
+}
+
+.login-container {
+	height: 80vh;
 	display: flex;
 	justify-content: space-around;
+	background-color: #DF6B48;
+	flex-wrap: wrap;
 	align-items: center;
 	padding: 0 10%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .login-container .left{
-	position: relative;
+	/* position: relative; */
+	background-color: #55df48;
 	height: 80%;
 }
 .login-container .left p{
@@ -65,7 +71,8 @@
 	color: #fff !important;
 }
 .login-container .right{
-	position: relative;
+	/* position: relative; */
+	background-color: #4870df;
 	height: 80%;
 }
 .login-container .right .Box{
