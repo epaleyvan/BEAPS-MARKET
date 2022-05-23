@@ -34,44 +34,86 @@
 
 </head>
 <body>
+
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">
-    
-          <div class="logo">
-            <h1><a href="index.html">BEAPS MARKET</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-          </div>
-    
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="icon" href="chart.html"><i class="bi bi-cart4 bx-sm"></i></a></li>
-              <li><a class="nav-link scrollto active" href="index.html">Accueil</a></li>
-              <li><a class="nav-link scrollto" href="about.html">Beaps Infos</a></li>
-              <li class="dropdown"><a href="#"><span>Nos produits</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li class="dropdown"><a href="products.html#category1"><span>Catégorie 1</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Deep Drop Down 1</a></li>
-                      <li><a href="#">Deep Drop Down 2</a></li>
-                      <li><a href="#">Deep Drop Down 3</a></li>
-                      <li><a href="#">Deep Drop Down 4</a></li>
-                      <li><a href="#">Deep Drop Down 5</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Catégorie 2</a></li>
-                  <li><a href="#">Catégorie 3</a></li>
-                  <li><a href="#">Catégorie 4</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link scrollto" href="about.html#contact">Contact</a></li>
-              <li><a class="icon" href="login.html"><i class="bi bi-person bx-sm"></i></a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-    
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <div class="logo">
+          <h1><a href="index.html">BEAPS MARKET</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
         </div>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="icon position-relative" href="chart.html"><i class="bi bi-cart4 bx-sm"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span></a></li>
+            <li><a class="nav-link scrollto" href="index.html">Accueil</a></li>
+            <li><a class="nav-link scrollto" href="about.html">Beaps Infos</a></li>
+            <li class="dropdown"><a  class="nav-link scrollto active" href="products.html"><span>Nos produits</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li class="dropdown"><a href="products.html#category1"><span>Produits laitiers</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Yaourt</a></li>
+                    <li><a href="#">Poudre de lait</a></li>
+                    <li><a href="#">Lait liquide</a></li>
+                    <li><a href="#">Fromage</a></li>
+                    <li><a href="#">Glace & Crème glacée</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="products.html#category1"><span>Viandes - Poissons - Œufs</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Viandes</a></li>
+                    <li><a href="#">Poissons</a></li>
+                    <li><a href="#">Œufs</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="products.html#category1"><span>Matières grasses</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Beurre</a></li>
+                    <li><a href="#">crème de cuisson</a></li>
+                    <li><a href="#">Graisses animales</a></li>
+                    <li><a href="#">Huile de cuisson</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="products.html#category1"><span>Légumes & Fruits</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Légumes</a></li>
+                    <li><a href="#">Fruits</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="products.html#category1"><span>Céréales & Dérivés</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Céréales</a></li>
+                    <li><a href="#">Dérivés</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="products.html#category1"><span>Sucres & Produits sucrés</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Sucres</a></li>
+                    <li><a href="#">Confiserie</a></li>
+                    <li><a href="#">Miel</a></li>
+                    <li><a href="#">Chocolat</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="products.html#category1"><span>Boissons</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Eaux</a></li>
+                    <li><a href="#">Boissons sucrés</a></li>
+                    <li><a href="#">Thé & Café</a></li>
+                    <li><a href="#">Jus de fruits</a></li>
+                    <li><a href="#">Boissons alcoolisées</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="about.html#contact">Contact</a></li>
+            <li><a class="icon" href="login.html"><i class="bi bi-person bx-sm"></i></a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+      </div>
     </header><!-- End Header -->
 
     <main id="main">
@@ -95,7 +137,7 @@
         <section id="portfolio-details" class="portfolio-details">
           <div class="container">
     
-            <div class="row gy-4">
+            <div class="row">
     
               <div class="col-lg-8">
                 <div class="portfolio-details-slider swiper">
@@ -119,20 +161,32 @@
               </div>
     
               <div class="col-lg-4">
-                <div class="portfolio-info">
-                  <h3>Information sur le produit</h3>
-                  <ul>
-                    <li><strong>Categorie</strong>: Alimentation</li>
-                    <li><strong>Disponibilité</strong>: <span style="color: green;">En stock</span></li>
-                    <li><strong>Prix</strong>: XXX FCFA</li>
-                  </ul>
-                  <div class="row vertical">
-                    <div class="col">
-                        <a href="#" class="btn-standard btn--rounded "><i class="bi bi-heart"></i> Ajouter au favoris</a> 
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h3>Nom du produit</h3>
+                    <h4>Prix du Produit FCFA</h4>
+                  </div>
+                  <div class="col-lg-12">
+                    <p>Description du produit</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam aut a assumenda natus ipsa error eum unde cumque non quo aliquid, ipsam sunt ipsum voluptas exercitationem mollitia, fugit, obcaecati quia?</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <button><i class="bx bx-minus"></i></button>
                     </div>
-                    <br>
-                    <div class="col">
-                        <a href="#" class="btn-standard btn--rounded "><i class="bi bi-plus-lg"></i> Ajouter à la liste</a> 
+                    <div class="col-lg-8">
+                      <input type="number" name="" id="" value="1">
+                    </div>
+                    <div class="col-lg-2">
+                      <button><i class="bx bx-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-8">
+                        <a href="#" class="btn-standard" title="Ajouter au favoris">Ajouter à la liste</a> 
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#" class="btn-standard"><i class="bi bi-heart"></i></i></a> 
                     </div>
                   </div>
                 </div>    

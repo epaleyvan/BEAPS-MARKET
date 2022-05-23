@@ -12,7 +12,7 @@ body {
   }
   
   a:hover, a:active, a:focus {
-    color: #ad553a;
+    color: #413152;
     outline: none;
     text-decoration: none;
   }
@@ -292,7 +292,6 @@ body {
 #hero {
   width: 100%;
   overflow: hidden;
-  position: relative;
   background: url("/assets/img/image_3.jpg");
   background: url("../img/image_3.jpg");
   background-position: center 35%;
@@ -717,25 +716,23 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio {
-  background: #f7f7f7;
+  background: #fff;
   padding: 80px 0;
 }
 .portfolio .portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;
   list-style: none;
-  text-align: center;
   border-radius: 50px;
 }
 .portfolio .portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 12px 18px 14px 18px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1;
   color: #666666;
-  margin: 0 5px 10px 5px;
   transition: all ease-in-out 0.3s;
   background: white;
   border-radius: 4px;
@@ -768,9 +765,10 @@ section {
   padding: 15px 20px;
 }
 .portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 .portfolio .portfolio-item .portfolio-info p {
   color: #fff;
@@ -786,7 +784,8 @@ section {
   transition: ease-in-out 0.3s;
 }
 .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #a4ebd4;
+  color: #413152;
+  transform: scale(2, 2);
 }
 .portfolio .portfolio-item .portfolio-info .details-link {
   right: 15px;
@@ -959,7 +958,7 @@ section {
     justify-content: center;
   }
   .team .member .social a:hover {
-    background: #ad553a;
+    background: #413152;
   }
   .team .member .social i {
     font-size: 18px;
@@ -1095,7 +1094,7 @@ section {
     border-radius: 50px;
   }
   .contact .php-email-form button[type=submit]:hover {
-    background: #ad553a;
+    background: #413152;
   }
   @-webkit-keyframes animate-loading {
     0% {
@@ -1205,7 +1204,7 @@ section {
     transition: 0.3s;
   }
   #footer .social-links a:hover {
-    background: #ad553a;
+    background: #413152;
     color: #fff;
     text-decoration: none;
   }
