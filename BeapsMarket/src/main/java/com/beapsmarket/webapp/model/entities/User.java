@@ -28,8 +28,11 @@ public class User {
 
 	private int phone;
 	private TypeOfAccount type;
+	@Column(nullable = false, unique = true)
 	private String email;
+	@Column(nullable = false, unique = true)
 	private String username;
+	@Column(nullable = false)
 	private String password;
 
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

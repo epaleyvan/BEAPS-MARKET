@@ -12,6 +12,7 @@ import java.util.Set;
 @Data
 public class DeliveryDto {
 
+	private String reference;
 	private boolean state;
 	private Set<ShoppingListDto> shoppingListsDtos;
 	private UserDto userDto;

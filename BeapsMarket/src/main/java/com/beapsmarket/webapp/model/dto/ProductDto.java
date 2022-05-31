@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -18,7 +19,7 @@ public class ProductDto {
 	private String description;
 	private int quantityList;
 	private CategoryDto categoryDto;
-	private Set<ShoppingListDto> shoppingListDtos;
-	private Set<PictureDto> pictureDtos;
+	private Set<ShoppingListDto> shoppingListDtos = new HashSet<>();
+	private Set<PictureDto> pictureDtos = new HashSet<>();
 
 }

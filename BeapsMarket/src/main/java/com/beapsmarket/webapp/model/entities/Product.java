@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -18,8 +19,11 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
+	@Column(nullable = false, unique = true)
 	private String reference;
+	@Column(nullable = false)
 	private String name;
+	@Column(nullable = false)
 	private int unitPrice;
 	private String description;
 	private int quantityList;
@@ -29,9 +33,9 @@ public class Product {
 	private Category category;
 
 	@ManyToMany(mappedBy = "products")
-	private Set<ShoppingList> shoppingLists;
+	private Set<ShoppingList> shoppingLists = new HashSet<>();
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
-	private Set<Picture> pictures;
+	private Set<Picture> pictures = new HashSet<>();
 
 }

@@ -14,6 +14,7 @@ import java.util.Set;
 public class ShoppingListDto {
 
     private String reference;
+    private String name;
     private Set<ProductDto> productDtos = new HashSet<>();
     private PaymentDto paymentDto;
     private UserDto userDto;

@@ -19,7 +19,10 @@ public class ShoppingList {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
+	@Column(nullable = false, unique = true)
 	private String reference;
+	@Column(unique = true)
+	private String name;
 
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(name = "product", joinColumns = @JoinColumn(name = "shoppingList_id"), inverseJoinColumns = @JoinColumn(name = "product_id"))
