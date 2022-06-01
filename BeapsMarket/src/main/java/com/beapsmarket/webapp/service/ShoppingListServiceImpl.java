@@ -18,22 +18,41 @@ public class ShoppingListServiceImpl implements IShoppingList{
     ShoppingListRepository shoppingListRepository;
     @Override
     public int deleteShoppingList(String reference) {
-        shoppingListRepository.delete(shoppingListRepository.findByReference(reference));
-        return 1;
+        try{
+            shoppingListRepository.delete(shoppingListRepository.findByReference(reference));
+            return 0;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return -1;
     }
 
     @Override
-    public List<ShoppingListDto> ListShoppingList() {
-        return shoppingListRepository.findAll().stream().map(shoppingList -> shoppingListMapper.toDto(shoppingList)).collect(Collectors.toList());
+    public int saveShoppingList(ShoppingListDto shoppingListDto) {
+        if(shoppingListRepository.existsByReference(shoppingListDto.getReference())){
+            shoppingListRepository.save(shoppingListMapper.toEntity(shoppingListDto));
+            return 0;
+        }
+        return -1;
     }
 
     @Override
     public ShoppingListDto searchShoppingListByReference(String reference) {
-        return shoppingListMapper.toDto(shoppingListRepository.findByReference(reference));
+        try {
+            return shoppingListMapper.toDto(shoppingListRepository.findByReference(reference));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 
     @Override
     public ShoppingListDto searchShoppingListByName(String name) {
-        return shoppingListMapper.toDto(shoppingListRepository.findByNameIgnoreCase(name));
+        try{
+            return shoppingListMapper.toDto(shoppingListRepository.findByNameIgnoreCase(name));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 }

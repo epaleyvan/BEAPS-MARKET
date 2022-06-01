@@ -2,6 +2,7 @@ package com.beapsmarket.webapp.service;
 
 import com.beapsmarket.webapp.mapper.AddressMapper;
 import com.beapsmarket.webapp.model.dto.AddressDto;
+import com.beapsmarket.webapp.model.dto.UserDto;
 import com.beapsmarket.webapp.model.entities.Address;
 import com.beapsmarket.webapp.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,13 @@ public class AddressServiceImpl implements IAddress{
     public Set<AddressDto> findAllAddress() {
         Set<Address> address = new HashSet<>(addressRepository.findAll());
         return address.stream().map(addressMapper::toDto).collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<AddressDto> findAddressesOfUser(UserDto userDto) {
+        return addressRepository.findByUser_Email(userDto.getEmail()).get().stream()
+                .map(addressMapper::toDto)
+                .collect(Collectors.toSet());
     }
 
     @Override

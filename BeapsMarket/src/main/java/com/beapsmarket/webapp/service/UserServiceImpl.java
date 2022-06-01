@@ -20,6 +20,9 @@ public class UserServiceImpl implements IUser{
     @Autowired
     UserMapper userMapper;
 
+    @Autowired
+    IAddress iAddress;
+
 
     @Override
     public int saveUser(UserDto userDto) {
@@ -39,7 +42,9 @@ public class UserServiceImpl implements IUser{
     public UserDto findUserByUsername(String string) {
         try{
             User user = userRepository.findUsersByUsername(string);
-            return userMapper.toDto(user);
+            UserDto userDto = userMapper.toDto(user);
+            userDto.setAddressesDtos(iAddress.findAddressesOfUser(userDto));
+            return userDto;
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -71,12 +76,12 @@ public class UserServiceImpl implements IUser{
 
     @Override
     public int deleteUserByEmail(String email) {
-
-        return 0;
-    }
-
-    @Override
-    public int deleteUser(UserDto userDto) {
-        return 0;
+        try{
+            userRepository.deleteByEmail(email);
+            return 0;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return -1;
     }
 }

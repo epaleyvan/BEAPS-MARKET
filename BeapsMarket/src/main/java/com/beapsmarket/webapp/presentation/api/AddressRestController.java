@@ -39,4 +39,9 @@ public class AddressRestController {
         return ResponseEntity.ok(iAddress.findAddressByCode(code));
     }
 
+    @GetMapping("/{code}/delete")
+    public  void deleteAddress(@PathVariable int code){
+        iAddress.findAddressByCode(code);
+    }
+
 }
