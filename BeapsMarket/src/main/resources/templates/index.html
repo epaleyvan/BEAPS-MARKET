@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <th:block th:replace="fragments/_head.html::head"></th:block>
+</head>
+<body>
+
+  <!-- ======= Header ======= -->
+  <th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+  <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Bienvenue sur <span>BEAPS MARKET</span></h2>
+          <p class="animate__animated fanimate__adeInUp">Votre site de confection et de livraison de vos listes de marché</p>
+          <a href="products.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Faire ma liste</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Nous sommes à votre service</h2>
+          <p class="animate__animated animate__fadeInUp">Un service de livraison rapide et de qualité le tout à moindre coût !</p>
+          <a href="products.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Faire ma liste</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Pas besoin de vous déplacer</h2>
+          <p class="animate__animated animate__fadeInUp">Confectionner votre liste de course où que vous soyez, et recevez tous vos produits à l'endroit indiqué dans de bref délai</p>
+          <a href="products.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Faire ma liste</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+    </section><!-- End Hero -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+  
+          <div class="section-title" data-aos="zoom-out">
+            <h2>Services</h2>
+            <p>Qu'est-ce que nous vous offrons</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box  service--bordered" data-aos="zoom-in-left">
+                <div class="icon"><i class="bi bi-clock" style="color: #15a5a5;"></i></div>
+                <h4 class="title"><a href="">Rapidité</a></h4>
+                <p class="description">Recevez vos produits en un bref délai de temps.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+              <div class="icon-box  service--bordered" data-aos="zoom-in-left" data-aos-delay="100">
+                <div class="icon"><i class="bi bi-check2-circle" style="color: #DF6B48;"></i></div>
+                <h4 class="title"><a href="">Qualité</a></h4>
+                <p class="description">Nos produits sont frais et bien entretenue. Retrouvez également vos marques préférées.</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+              <div class="icon-box  service--bordered" data-aos="zoom-in-left" data-aos-delay="200">
+                <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>
+                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    
+    <!-- ======= Categories Section ======= -->
+    <section id="category" class="category">
+      <div class="category__container" data-aos="fade-up">
+        <div class="category__item">
+          <a href="products.html#Categorie1" class="btn-standard btn--rounded btn--lg">Produits laitiers</a>
+        </div>
+        <div class="category__item">
+          <a href="products.html#Categorie2" class="btn-standard btn--rounded btn--lg">Viande - Poisson - Oeuf</a>
+        </div>
+        <div class="category__item">
+          <a href="products.html#Categorie3" class="btn-standard btn--rounded btn--lg">Matières grasses</a>
+        </div>
+        <div class="category__item">
+          <a href="products.html#Categorie4" class="btn-standard btn--rounded btn--lg">Légumes & Fruits</a>
+        </div>
+        <div class="category__item">
+          <a href="products.html#Categorie5" class="btn-standard btn--rounded btn--lg">Céréales & Dérivés</a>
+        </div>
+        <div class="category__item">
+          <a href="products.html#Categorie6" class="btn-standard btn--rounded btn--lg">Sucres & Produits sucrés</a>
+        </div>
+        <div class="category__item">
+          <a href="products.html#Categorie7" class="btn-standard btn--rounded btn--lg">Boissons</a>
+        </div>
+      </div>
+    </section><!-- End categories Section -->
+
+    <!-- ======= Footer ======= -->
+  <th:block th:replace="fragments/_footer.html::footer"></th:block>
+
+
+
+  <th:block th:replace="fragments/_js.html::js"></th:block>
+</body>
+</html>

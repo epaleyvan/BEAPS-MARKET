@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="fragments/_head.html::head"></th:block>
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+<!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs Section ======= -->
+        <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+            <h2>Inner Page</h2>
+            <ol>
+                <li><a href="index.html">Accueil</a></li>
+                <li>Inner Page</li>
+            </ol>
+            </div>
+
+        </div>
+        </section><!-- End Breadcrumbs Section -->
+
+        <section class="inner-page pt-4">
+        <div class="container">
+            <p>
+            Example inner page template
+            </p>
+        </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <th:block th:replace="fragments/_footer.html::footer"></th:block>
+
+
+
+    <th:block th:replace="fragments/_js.html::js"></th:block
+
+</body>
+
+</html>

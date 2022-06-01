@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <th:block th:replace="fragments/_head.html::head"></th:block>
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center about--background">
+      <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container about-section">
+            <h2 class="animate__animated animate__fadeInDown">Nous avons eu une idée</span></h2>
+            <p class="animate__animated fanimate__adeInUp"><strong>BEAPS MARKET</strong> est le produit pensé pour vous</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">En savoir plus</a>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Nous l'avons fait pour vous !</h2>
+            <p class="animate__animated animate__fadeInUp"><strong>BEAPS MARKET</strong> est le produit qui vous correspond</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">En savoir plus</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Parce que vous le méritez !</h2>
+            <p class="animate__animated animate__fadeInUp"><strong>BEAPS MARKET</strong> est le produit fait pour vous</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">En savoir plus</a>
+          </div>
+        </div>
+  
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        </a>
+  
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        </a>
+  
+      </div>
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+        </g>
+      </svg>
+
+  </section><!-- End Hero -->
+    
+  <main>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>About</h2>
+          <p>Qui Sommes Nous</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <p>
+              Nous sommes une entreprise d'achat et de livraison de produits alimentaires frais ayant plus de
+              10 ans d'experience et qui a pour devise:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> <span class="devise">Rapidité</span></li>
+              <li><i class="ri-check-double-line"></i> <span class="devise">Qualité</span></li>
+              <li><i class="ri-check-double-line"></i> <span class="devise">Livraison avec le sourire</span> car c'est vous qui faites notre bonheur</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+            Nous travaillons actuellement au Cameroun plus précisément dans les villes du centre(Yaounde,Douala).
+            Et nous ne souhaitons qu'une seule chose ,vous faciliter la vie.Alors  faites nous confiance pour toutes vos listes de courses.
+            Nous essayer ,c'est nous adopter.
+            </p>
+            <a href="#testimonials" class="btn-learn-more">Voir Plus</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+    <div class="container">
+
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Testimonials</h2>
+        <p>Ce que disent les gens de nous</p>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                J'etais un peu mefiant au depart au sujet de la qualite des produits , mes craintes se sont dissipees des la premiere livraison et depuis je ne peux
+                plus m'en passer.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="./assets/img/testimonial&team/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Ils respectent leurs devises a la lettre pres , je suis toujours satisfaite de la vitesse a laquelle mes commandes arrivent et de la qualite des produits 
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="./assets/img/testimonial&team/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  La joie que procure la reception de mes colis et en partie du au sourire des livreurs,ils inspirent confiance
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="./assets/img/testimonial&team/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Grace a eux ,je peux faire mes courses dans mes supermaches preferes tels que Casino et Carrefour tout en etant dans mon canape
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="./assets/img/testimonial&team/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Toujours satisfait, si seulement ils pouvaient egalement livrer des plats.Je suis sur qu'ils seraient aussi savoureux que leurs produits.                        
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="./assets/img/testimonial&team/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Faites un don a une association</h3>
+            <p>En donnant quelques sous, vous pouvez soutenir des associations d'aides aux necessiteux ou des ONGs </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Faire un don</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Team</h2>
+        <p>Notre Equipe De Travail</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up">
+            <div class="member-img">
+              <img src="assets/img/testimonial&team/epale.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Epale Yvan</h4>
+              <span>President Directeur General</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+              <img src="assets/img/testimonial&team/adj1.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Adjewa Frederick</h4>
+              <span>Directeur General</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/img/testimonial&team/steph1.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Siewe Stephanie</h4>
+              <span>Chef de projet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
+              <img src="assets/img/testimonial&team/bidzanna.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Bidzanna Erwin</h4>
+              <span>Comptable</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
+              <img src="assets/img/testimonial&team/powell1.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Achetkouegnigni Powell</h4>
+              <span>Product Manager</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Contact</h2>
+        <p>Contactez Nous</p>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4" data-aos="fade-right">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Localisation:</h4>
+              <p>Eyang, Lobo - CAMEROUN</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>BeapsMarket@gmail.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+237 699 99 99 99</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Votre Mail" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Patientez</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Votre message a été envoyé. Merci !</div>
+            </div>
+            <div class="text-center"><button type="submit">Envoyez un message</button></div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+    </section><!-- End Contact Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+<th:block th:replace="fragments/_footer.html::footer"></th:block>
+
+
+
+<th:block th:replace="fragments/_js.html::js"></th:block>
+</body>
+</html>

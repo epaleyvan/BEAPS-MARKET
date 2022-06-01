@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="fragments/_head.html::head"></th:block>
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+<!-- End Header -->
+
+
+<div class="container cartPage">
+    <h4>Votre chariot est prêt à passer à la caisse !</h4>
+
+    <hr>
+    <h6>Liste en cours: nom de la liste /<span>Reference</span> / <span>ID</span></h6>
+
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Produit 1</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>Prix TTC</th>
+        </tr>
+       <form action="">
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>produit 2</td>
+            <td>01</td>
+            <td>2000 fcfa</td>
+            <td>3000 fcfa</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>produit 3</td>
+            <td>24</td>
+            <td>12 000 fcfa</td>
+            <td>13500 fcfa</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>produit 4</td>
+            <td>05</td>
+            <td>1000 fcfa</td>
+            <td>1200 fcfa</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>produit 5</td>
+            <td>02</td>
+            <td>1500 fcfa</td>
+            <td>1700fcfa</td>
+        </tr>
+    </table>
+
+            <div class="pay">
+                <h4>Prix total</h4>
+                <h5>XXX fcfa</h5>
+            <button>Effectuer le paiement</button>
+            </div>
+       </form>
+
+</div>
+
+
+
+
+<th:block th:replace="fragments/_footer.html::footer"></th:block>
+
+
+
+<th:block th:replace="fragments/_js.html::js"></th:block>
+    
+</body>
+</html>
