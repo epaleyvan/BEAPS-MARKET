@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api/beapsmarket/delivery")
+@RequestMapping("/api/delivery")
 @Slf4j
 public class DeliveryRestController {
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api/beapsmarket/address")
+@RequestMapping("/api/address")
 @Slf4j
 public class AddressRestController {
     @Autowired
