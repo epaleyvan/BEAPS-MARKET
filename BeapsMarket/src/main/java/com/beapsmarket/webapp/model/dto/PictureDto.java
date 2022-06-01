@@ -17,5 +17,6 @@ public class PictureDto {
 
 	private String name;
 	private String url;
+	private ProductDto productDto;
 
 }

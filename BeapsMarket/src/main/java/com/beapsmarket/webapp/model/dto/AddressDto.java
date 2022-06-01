@@ -15,7 +15,9 @@ import javax.persistence.Id;
 @Data
 public class AddressDto {
 
+	private int code;
 	private String quarter;
 	private String mark;
 	private String country;
+	private UserDto userDto;
 }

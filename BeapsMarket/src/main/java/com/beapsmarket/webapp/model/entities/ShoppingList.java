@@ -25,7 +25,7 @@ public class ShoppingList {
 	private String name;
 
 	@ManyToMany(cascade = CascadeType.PERSIST)
-	@JoinTable(name = "product", joinColumns = @JoinColumn(name = "shoppingList_id"), inverseJoinColumns = @JoinColumn(name = "product_id"))
+	@JoinTable(name = "product_shopping_list", joinColumns = @JoinColumn(name = "shopping_list_id"), inverseJoinColumns = @JoinColumn(name = "product_id"))
 	private Set<Product> products = new HashSet<>();
 
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,4 +20,7 @@ public class Picture {
 	private String name;
 	private String url;
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "product_id", nullable = false)
+	private Product product;
 }
