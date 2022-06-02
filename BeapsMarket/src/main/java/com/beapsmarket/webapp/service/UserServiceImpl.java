@@ -41,10 +41,7 @@ public class UserServiceImpl implements IUser{
     @Override
     public UserDto findUserByUsername(String string) {
         try{
-            User user = userRepository.findUsersByUsername(string);
-            UserDto userDto = userMapper.toDto(user);
-            userDto.setAddressesDtos(iAddress.findAddressesOfUser(userDto));
-            return userDto;
+           return userMapper.toDto(userRepository.findUsersByUsername(string));
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

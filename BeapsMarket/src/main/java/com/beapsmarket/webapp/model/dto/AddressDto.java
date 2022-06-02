@@ -19,5 +19,4 @@ public class AddressDto {
 	private String quarter;
 	private String mark;
 	private String country;
-	private UserDto userDto;
 }

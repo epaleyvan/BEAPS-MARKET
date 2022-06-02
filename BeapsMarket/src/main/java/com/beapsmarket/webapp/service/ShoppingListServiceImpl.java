@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -16,6 +17,15 @@ public class ShoppingListServiceImpl implements IShoppingList{
     ShoppingListMapper shoppingListMapper;
     @Autowired
     ShoppingListRepository shoppingListRepository;
+
+
+
+    @Override
+    public int updateShoppingList(ShoppingListDto shoppingListDto) {
+        return 2;
+    }
+
+
     @Override
     public int deleteShoppingList(String reference) {
         try{
@@ -25,6 +35,11 @@ public class ShoppingListServiceImpl implements IShoppingList{
             System.out.println(e.getMessage());
         }
         return -1;
+    }
+
+    @Override
+    public Set<ShoppingListDto> ListShoppingList() {
+        return null;
     }
 
     @Override

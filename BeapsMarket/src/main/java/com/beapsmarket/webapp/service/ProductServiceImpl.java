@@ -2,6 +2,7 @@ package com.beapsmarket.webapp.service;
 
 
 import com.beapsmarket.webapp.mapper.ProductMapper;
+import com.beapsmarket.webapp.model.dto.CategoryDto;
 import com.beapsmarket.webapp.model.dto.ProductDto;
 import com.beapsmarket.webapp.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,11 @@ public class ProductServiceImpl implements IProduct{
     }
 
     @Override
+    public Set<ProductDto> searchProductByCategory(String idcategorie) {
+        return null;
+    }
+
+    @Override
     public ProductDto searchProductByReference(String reference) {
         try{
             return productMapper.toDto(productRepository.findByReference(reference));
@@ -59,6 +65,7 @@ public class ProductServiceImpl implements IProduct{
         }
         return null;
     }
+
 
     @Override
     public Set<ProductDto> searchAllProduct() {

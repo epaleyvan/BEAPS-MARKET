@@ -4,10 +4,13 @@ import com.beapsmarket.webapp.model.dto.ShoppingListDto;
 import com.beapsmarket.webapp.model.entities.ShoppingList;
 
 import java.util.List;
+import java.util.Set;
 
 public interface IShoppingList {
-    int saveShoppingList(ShoppingListDto shoppingListDto);
+    int deleteShoppingList(String reference);
+    Set<ShoppingListDto> ListShoppingList();
     ShoppingListDto searchShoppingListByReference (String reference);
     ShoppingListDto searchShoppingListByName(String name);
-    int deleteShoppingList(String reference);
+     int updateShoppingList(ShoppingListDto shoppingListDto);
+     int saveShoppingList(ShoppingListDto shoppingListDto);
 }

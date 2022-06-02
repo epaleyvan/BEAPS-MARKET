@@ -29,10 +29,6 @@ public class AddressRestController {
     }
 
 
-    @GetMapping("/{code}/user")
-    public ResponseEntity<UserDto> getUserByAddress(@PathVariable int code) {
-        return ResponseEntity.ok(iAddress.findAddressByCode(code).getUserDto());
-    }
 
     @GetMapping("/{code}/data")
     public ResponseEntity<AddressDto> getAddressByCode(@PathVariable int code) {

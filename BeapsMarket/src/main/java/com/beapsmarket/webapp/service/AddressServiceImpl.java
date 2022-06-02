@@ -35,12 +35,6 @@ public class AddressServiceImpl implements IAddress{
         return address.stream().map(addressMapper::toDto).collect(Collectors.toSet());
     }
 
-    @Override
-    public Set<AddressDto> findAddressesOfUser(UserDto userDto) {
-        return addressRepository.findByUser_Email(userDto.getEmail()).get().stream()
-                .map(addressMapper::toDto)
-                .collect(Collectors.toSet());
-    }
 
     @Override
     public AddressDto findAddressByCode(int i) {

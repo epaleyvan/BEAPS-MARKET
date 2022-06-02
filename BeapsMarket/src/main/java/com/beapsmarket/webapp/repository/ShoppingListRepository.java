@@ -11,5 +11,6 @@ public interface ShoppingListRepository extends JpaRepository<ShoppingList, Long
     ShoppingList deleteByReference(String reference);
     ShoppingList findByReference(String string);
 
+
     boolean existsByReference(String string);
 }
