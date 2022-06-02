@@ -1,0 +1,131 @@
+Index: src/main/java/com/beapsmarket/webapp/repository/ShoppingListRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.beapsmarket.webapp.repository;\r\n\r\nimport com.beapsmarket.webapp.model.entities.ShoppingList;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\n\r\nimport java.util.Optional;\r\n\r\npublic interface ShoppingListRepository extends JpaRepository<ShoppingList, Long> {\r\n\r\n    ShoppingList findByNameIgnoreCase(String string);\r\n    ShoppingList deleteByReference(String reference);\r\n    ShoppingList findByReference(String string);\r\n    Optional<ShoppingList> findByNameOrReference(String name);\r\n\r\n    boolean existsByReference(String string);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/beapsmarket/webapp/repository/ShoppingListRepository.java b/src/main/java/com/beapsmarket/webapp/repository/ShoppingListRepository.java
+--- a/src/main/java/com/beapsmarket/webapp/repository/ShoppingListRepository.java	(revision 02f22714650db8d86264f704df541fa2a9e4c393)
++++ b/src/main/java/com/beapsmarket/webapp/repository/ShoppingListRepository.java	(date 1654068755347)
+@@ -12,5 +12,6 @@
+     ShoppingList findByReference(String string);
+     Optional<ShoppingList> findByNameOrReference(String name);
+ 
++
+     boolean existsByReference(String string);
+ }
+Index: src/main/java/com/beapsmarket/webapp/service/ShoppingListServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.beapsmarket.webapp.service;\r\n\r\nimport com.beapsmarket.webapp.mapper.ShoppingListMapper;\r\nimport com.beapsmarket.webapp.model.dto.ShoppingListDto;\r\nimport com.beapsmarket.webapp.model.entities.ShoppingList;\r\nimport com.beapsmarket.webapp.repository.ShoppingListRepository;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Service;\r\n\r\nimport java.util.List;\r\nimport java.util.stream.Collectors;\r\n\r\n@Service\r\npublic class ShoppingListServiceImpl implements IShoppingList{\r\n    @Autowired\r\n    ShoppingListMapper shoppingListMapper;\r\n    @Autowired\r\n    ShoppingListRepository shoppingListRepository;\r\n    @Override\r\n    public int deleteShoppingList(String reference) {\r\n        shoppingListRepository.delete(shoppingListRepository.findByReference(reference));\r\n        return 1;\r\n    }\r\n\r\n    @Override\r\n    public List<ShoppingListDto> ListShoppingList() {\r\n        return shoppingListRepository.findAll().stream().map(shoppingList -> shoppingListMapper.toDto(shoppingList)).collect(Collectors.toList());\r\n    }\r\n\r\n    @Override\r\n    public ShoppingListDto searchShoppingListByReference(String reference) {\r\n        return shoppingListMapper.toDto(shoppingListRepository.findByReference(reference));\r\n    }\r\n\r\n    @Override\r\n    public ShoppingListDto searchShoppingListByName(String name) {\r\n        return shoppingListMapper.toDto(shoppingListRepository.findByNameIgnoreCase(name));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/beapsmarket/webapp/service/ShoppingListServiceImpl.java b/src/main/java/com/beapsmarket/webapp/service/ShoppingListServiceImpl.java
+--- a/src/main/java/com/beapsmarket/webapp/service/ShoppingListServiceImpl.java	(revision 02f22714650db8d86264f704df541fa2a9e4c393)
++++ b/src/main/java/com/beapsmarket/webapp/service/ShoppingListServiceImpl.java	(date 1654069207395)
+@@ -16,6 +16,20 @@
+     ShoppingListMapper shoppingListMapper;
+     @Autowired
+     ShoppingListRepository shoppingListRepository;
++
++
++
++    @Override
++    public int updateShoppingList(ShoppingListDto shoppingListDto) {
++        return 2;
++    }
++
++    @Override
++    public int saveShoppingList(ShoppingListDto shoppingListDto) {
++
++        return 0;
++    }
++
+     @Override
+     public int deleteShoppingList(String reference) {
+         shoppingListRepository.delete(shoppingListRepository.findByReference(reference));
+Index: src/main/java/com/beapsmarket/webapp/service/IShoppingList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.beapsmarket.webapp.service;\r\n\r\nimport com.beapsmarket.webapp.model.dto.ShoppingListDto;\r\nimport com.beapsmarket.webapp.model.entities.ShoppingList;\r\n\r\nimport java.util.List;\r\n\r\npublic interface IShoppingList {\r\n    int deleteShoppingList(String reference);\r\n    List<ShoppingListDto> ListShoppingList();\r\n    ShoppingListDto searchShoppingListByReference (String reference);\r\n    ShoppingListDto searchShoppingListByName(String name);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/beapsmarket/webapp/service/IShoppingList.java b/src/main/java/com/beapsmarket/webapp/service/IShoppingList.java
+--- a/src/main/java/com/beapsmarket/webapp/service/IShoppingList.java	(revision 02f22714650db8d86264f704df541fa2a9e4c393)
++++ b/src/main/java/com/beapsmarket/webapp/service/IShoppingList.java	(date 1654068755175)
+@@ -6,6 +6,8 @@
+ import java.util.List;
+ 
+ public interface IShoppingList {
++    int updateShoppingList(ShoppingListDto shoppingListDto);
++    int saveShoppingList(ShoppingListDto shoppingListDto);
+     int deleteShoppingList(String reference);
+     List<ShoppingListDto> ListShoppingList();
+     ShoppingListDto searchShoppingListByReference (String reference);
+Index: src/main/java/com/beapsmarket/webapp/service/IProduct.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.beapsmarket.webapp.service;\r\n\r\nimport com.beapsmarket.webapp.model.dto.CategoryDto;\r\nimport com.beapsmarket.webapp.model.dto.ProductDto;\r\n\r\nimport java.util.List;\r\nimport java.util.Set;\r\n\r\npublic interface IProduct {\r\n int saveProduct(ProductDto productDto);\r\n int deleteProduct(String numero);\r\n Set<ProductDto> searchProductByCategory(CategoryDto categoryDto);\r\n ProductDto searchProductByReference(String reference);\r\n Set<ProductDto>searchProductByKeyword(String keyword);\r\n Set<ProductDto>ListProduct();\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/beapsmarket/webapp/service/IProduct.java b/src/main/java/com/beapsmarket/webapp/service/IProduct.java
+--- a/src/main/java/com/beapsmarket/webapp/service/IProduct.java	(revision 02f22714650db8d86264f704df541fa2a9e4c393)
++++ b/src/main/java/com/beapsmarket/webapp/service/IProduct.java	(date 1654068755097)
+@@ -7,6 +7,7 @@
+ import java.util.Set;
+ 
+ public interface IProduct {
++ int updateProduct(ProductDto productDto);
+  int saveProduct(ProductDto productDto);
+  int deleteProduct(String numero);
+  Set<ProductDto> searchProductByCategory(CategoryDto categoryDto);
+Index: src/main/java/com/beapsmarket/webapp/presentation/controller/ProductController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/beapsmarket/webapp/presentation/controller/ProductController.java b/src/main/java/com/beapsmarket/webapp/presentation/controller/ProductController.java
+new file mode 100644
+--- /dev/null	(date 1654069547169)
++++ b/src/main/java/com/beapsmarket/webapp/presentation/controller/ProductController.java	(date 1654069547169)
+@@ -0,0 +1,4 @@
++package com.beapsmarket.webapp.presentation.controller;
++
++public class ProductController {
++}
+Index: src/main/java/com/beapsmarket/webapp/presentation/controller/ShoppingListcontroller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/beapsmarket/webapp/presentation/controller/ShoppingListcontroller.java b/src/main/java/com/beapsmarket/webapp/presentation/controller/ShoppingListcontroller.java
+new file mode 100644
+--- /dev/null	(date 1654083300685)
++++ b/src/main/java/com/beapsmarket/webapp/presentation/controller/ShoppingListcontroller.java	(date 1654083300685)
+@@ -0,0 +1,22 @@
++package com.beapsmarket.webapp.presentation.controller;
++
++import com.beapsmarket.webapp.service.IShoppingList;
++import lombok.extern.slf4j.Slf4j;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Controller;
++import org.springframework.ui.Model;
++import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.PostMapping;
++
++@Controller
++@Slf4j
++public class ShoppingListcontroller {
++    @Autowired
++    IShoppingList iShoppingList;
++
++
++
++
++
++
++}
