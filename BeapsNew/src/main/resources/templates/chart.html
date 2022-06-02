@@ -18,15 +18,15 @@
     <h4>Votre chariot est prêt à passer à la caisse !</h4>
 
     <hr>
-    <form action="">
+    <form action="" th:each="shoppingListDto : ${shoppingListDtos}">
         <table class="table">
-            <h6>Ma liste : nom de la liste</h6>
-                <tr>
+            <h6 th:text="'Ma liste : ' + ${shoppingListDto.reference}">Ma liste : reference</h6>
+                <tr th:each="productDto : ${shoppingList.productDtos}">
                     <td><input type="checkbox"></td>
-                    <td>produit 2</td>
-                    <td>01</td>
-                    <td>2000 fcfa</td>
-                    <td>3000 fcfa</td>
+                    <td th:text="'Produit ' + ${productDtoStat.count}">produit 2</td>
+                    <td th:text="${productDto.quantityList}">01</td>
+                    <td th:text="${productDto.unitprice} + ' Fcfa'">2000 fcfa</td>
+                    <td th:text="${productDto.unitprice * productDto.quantityList} + ' Fcfa'">3000 fcfa</td>
                 </tr>
         </table>
             <div class="pay">

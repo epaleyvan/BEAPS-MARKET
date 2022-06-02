@@ -103,3 +103,27 @@ INSERT INTO product(reference, name, unitprice, description, idcategory) VALUES
 	('MI001', 'Dolait', 100, 'Vendu uniquement en paquet. Sachet de lait caillé', 1),
     ('ME001', 'Filet de boeuf', 1250, 'Vendu en 1/2Kg. Viande cértifié halal', 1),
 	('LE001', 'Banane mûr', 125, 'Banane bien ferme, mûr et cultivés dans la région de l\'ouest du Cameroun', 4);
+    
+    ALTER TABLE user CHANGE phone phone BIGINT UNSIGNED NOT NULL;
+    
+INSERT INTO user(name, surname, gender, phone, type, email, username, password) VALUES
+	('TOTO', 'Junior', 'Male', 655787878, 'Customer', 'totojunior@gmail.com', 'toto_junior', 'toto'),
+	('TATA', 'Christelle', 'Female', 651787878, 'Customer', 'tatachristelle@gmail.com', 'tata_christelle', 'tata'),
+	('TITOUNE', 'Yves', 'Male', 654787878, 'Customer', 'titouneyves@gmail.com', 'titoune_yves', 'titoune');
+    
+    ALTER TABLE shopping_list CHANGE idpayment idpayment SMALLINT;
+	ALTER TABLE shopping_list CHANGE iddelivery iddelivery SMALLINT;
+    
+INSERT INTO shopping_list(reference, iduser) VALUES
+	('TOT001', 1),
+	('TOT002', 1),
+	('TAT001', 2),
+	('TIT001', 3);
+
+INSERT INTO product_shopping_list VALUES
+	(1, 1), /* Ajout dans la liste du client X id = 1 le produit id=1 */
+    (1, 2),
+    (1, 3),
+    (2, 1),
+    (3, 1),
+	(4, 2);

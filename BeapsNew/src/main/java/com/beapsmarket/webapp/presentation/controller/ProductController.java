@@ -24,7 +24,6 @@ public class ProductController {
     @GetMapping("/shop")
     public String getAllProducts(Model model){
         Set<ProductDto> productDtos = iProduct.searchAllProduct();
-        System.out.println(productDtos);
         model.addAttribute("productDtos", productDtos);
         return  "products";
     }
