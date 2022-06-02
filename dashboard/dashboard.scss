@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+
+
+    .sidebar{
+        position: relative;
+        width: 20%;
+        background: #f9cabc;
+        height: 100%;
+        
+
+        .logo{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        nav{
+            margin-top: 228.5px;
+
+            ul{
+                position: relative;
+                width: 100%;
+
+                li{
+                    padding:25px 15px ;
+                    text-align: center;
+                    list-style: none;
+                    transition: .25s;
+
+                    &:hover{
+                        background: #fff;
+                    }
+
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .dash{
+        position: relative;
+        width: 80%;
+
+        .up{
+            position: relative;
+            width: 100%;
+            height: 30vh;
+
+            display: grid;
+            grid-template-columns: repeat(3,2fr);
+            column-gap: 35px;
+
+            .stats{
+                background:#f9cabc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:nth-child(2){
+                    background:#fad6cb;
+
+                }
+                &:nth-child(3){
+                    background:rgb(246, 237, 237);
+
+                }
+                .box{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+
+                    .number{
+                        position: absolute;
+                        top: 10%;
+                        left: 20%;
+                        font-size: 2em;
+                    }
+                    .description{
+                        position: absolute;
+                        bottom: 10%;
+                        right: 15%;
+                        font-size: 1em;
+                    }
+
+                }
+            }
+        }
+    }
+}
