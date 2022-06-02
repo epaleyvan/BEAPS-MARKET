@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html  xmlns:th="http://www.thymeleaf.org" lang="fr">
 
 <head>
+    <title>BEAPS MARKET | Liste des produits</title>
     <th:block th:replace="fragments/_head.html::head"></th:block>
 </head>
 <body>
 
-<!-- ======= Header ======= -->
-<th:block th:replace="fragments/_navbar.html::navbar"></th:block>
-<!-- End Header -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+    </header><!-- End Header -->
 
     <main id="main">
 
@@ -19,7 +21,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                 <h2>Produits Beaps</h2>
                 <ol>
-                    <li><a href="index.html">Accueil</a></li>
+                    <li><a th:href="@{/}">Accueil</a></li>
                     <li>Nos produits</li>
                 </ol>
                 </div>
@@ -42,13 +44,13 @@
                             <div id="collapseCategory" class="collapse">
                                 <ul id="portfolio-flters" class="portfolio-flters row">
                                     <li data-filter="*" class="filter-active col-lg-6">All</li>
-                                    <li data-filter=".filter-app" class="col-lg-6">Produits laitiers</li>
-                                    <li data-filter=".filter-card" class="col-lg-6">Viandes</li>
-                                    <li data-filter=".filter-web" class="col-lg-6">Matières grasses</li>
-                                    <li data-filter=".filter-app" class="col-lg-6">Légumes & fruits</li>
-                                    <li data-filter=".filter-card" class="col-lg-6">Céréales & Dérivés</li>
-                                    <li data-filter=".filter-web" class="col-lg-6">Sucres & Produits sucrés</li>
-                                    <li data-filter=".filter-web" class="col-lg-6">Boissons</li>
+                                    <li data-filter=".filter-milk" class="col-lg-6">Produits laitiers</li>
+                                    <li data-filter=".filter-meat" class="col-lg-6">Viandes</li>
+                                    <li data-filter=".filter-fat" class="col-lg-6">Matières grasses</li>
+                                    <li data-filter=".filter-legumes" class="col-lg-6">Légumes & fruits</li>
+                                    <li data-filter=".filter-cereal" class="col-lg-6">Céréales & Dérivés</li>
+                                    <li data-filter=".filter-sugar" class="col-lg-6">Sucres & Produits sucrés</li>
+                                    <li data-filter=".filter-drink" class="col-lg-6">Boissons</li>
                                 </ul>
                             </div>
                         </div>
@@ -72,95 +74,16 @@
                     <div class="col-lg-8">
                         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                 
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
+                            <div th:each="productDto : ${productDtos}" class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <img th:src="${'assets/img/portfolio/'}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4 th:text="${productDto.name}">Nom produits</h4>
+                                    <p th:text="${productDto.unitprice} + ' F CFA' ">Prix produits</p>
+                                    <a th:href="@{/}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
+                                    <a th:href="@{'/detail?reference=' + ${productDto.reference}" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
+                                </div>
                             </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
-                
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Nom produits</h4>
-                                <p>Prix produits</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                <a href="product__details.html" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
-                            </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>    

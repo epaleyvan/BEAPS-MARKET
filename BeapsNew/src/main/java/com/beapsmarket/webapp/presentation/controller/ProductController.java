@@ -23,10 +23,10 @@ public class ProductController {
 
 
 
-    /*@GetMapping("/shop")
-    public String ListProduct(Model model){
+    @GetMapping("/shop")
+    public String getAllProducts(Model model){
         Set<ProductDto> productDtos = iProduct.searchAllProduct();
-        model.addAttribute("productDtos",productDtos);
+        model.addAttribute("productDtos", productDtos);
         return "products";
     }
 
@@ -46,9 +46,10 @@ public class ProductController {
     @GetMapping("/rechercherParCategories")
     public String pageproduits_categories(@RequestParam(value = "keyword") String keyword,Model model){
 
-        Set<ProductDto> productDtos = iProduct.searchProductByCategory(keyword);
+        /*Set<ProductDto> productDtos = iProduct.searchProductByCategory(keyword);
         model.addAttribute("productDtos",productDtos);
-        return "products";
+        return "products";*/
+        return null;
     }
 
     @GetMapping("/rechercherproduits")
@@ -95,6 +96,6 @@ public class ProductController {
         ProductController.log.info("produit-editer");
         //ajouter la methode editer
         return "redirect:/dashboard";
-    }*/
+    }
 }
 

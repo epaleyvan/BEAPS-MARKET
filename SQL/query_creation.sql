@@ -90,4 +90,12 @@ CREATE TABLE product_shopping_list(
     CONSTRAINT fk_shopping_shopping FOREIGN KEY (idshoppinglist) REFERENCES shopping_list(id)
     )ENGINE=InnoDB;
 
-ALTER TABLE address ADD COLUMN code VARCHAR(8) NOT NULL UNIQUE;
+INSERT INTO category(reference, name) VALUES
+	('milk', 'Produits laitiers'),
+    ('meat', 'Viandes'),
+    ('fat', 'Matières grasses'),
+    ('legumes', 'Légumes & fruits'),
+    ('cereal', 'Céréales & Dérivés'),
+    ('sugar', 'Sucres & Produits sucrés'),
+    ('drink', 'Boissons');
+    

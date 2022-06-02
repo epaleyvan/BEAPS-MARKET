@@ -300,7 +300,7 @@ div.margin-bottom{
 	height: 100%;
 	width: 100%;
 	background-color: rgb(19, 173, 244);
-    transform: skewY(15%);
+    /*transform: skewY(15%);*/
 	border-radius: 70%;
 	transform: rotate(60deg);
 	z-index: -1;

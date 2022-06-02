@@ -2,12 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+  <title>BEAPS MARKET | Beaps Infos</title>
   <th:block th:replace="fragments/_head.html::head"></th:block>
 </head>
 <body>
 
-<!-- ======= Header ======= -->
-<th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <th:block th:replace="fragments/_navbar.html::navbar"></th:block>
+  </header>
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center about--background">
@@ -52,16 +56,16 @@
 
       <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
         <defs>
-          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
         </defs>
         <g class="wave1">
-          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"/>
         </g>
         <g class="wave2">
-          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"/>
         </g>
         <g class="wave3">
-          <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#fff"/>
         </g>
       </svg>
 
@@ -122,7 +126,7 @@
                 plus m'en passer.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="./assets/img/testimonial&team/testimonials-1.jpg" class="testimonial-img" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/testimonials-1.jpg'}" class="testimonial-img" alt="">
               <h3>Saul Goodman</h3>
               <h4>Ceo &amp; Founder</h4>
             </div>
@@ -135,7 +139,7 @@
                 Ils respectent leurs devises a la lettre pres , je suis toujours satisfaite de la vitesse a laquelle mes commandes arrivent et de la qualite des produits 
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="./assets/img/testimonial&team/testimonials-2.jpg" class="testimonial-img" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/testimonials-2.jpg'}" class="testimonial-img" alt="">
               <h3>Sara Wilsson</h3>
               <h4>Designer</h4>
             </div>
@@ -148,7 +152,7 @@
                   La joie que procure la reception de mes colis et en partie du au sourire des livreurs,ils inspirent confiance
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="./assets/img/testimonial&team/testimonials-3.jpg" class="testimonial-img" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/testimonials-3.jpg'}" class="testimonial-img" alt="">
               <h3>Jena Karlis</h3>
               <h4>Store Owner</h4>
             </div>
@@ -161,7 +165,7 @@
                   Grace a eux ,je peux faire mes courses dans mes supermaches preferes tels que Casino et Carrefour tout en etant dans mon canape
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="./assets/img/testimonial&team/testimonials-4.jpg" class="testimonial-img" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/testimonials-4.jpg'}" class="testimonial-img" alt="">
               <h3>Matt Brandon</h3>
               <h4>Freelancer</h4>
             </div>
@@ -174,7 +178,7 @@
                 Toujours satisfait, si seulement ils pouvaient egalement livrer des plats.Je suis sur qu'ils seraient aussi savoureux que leurs produits.                        
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="./assets/img/testimonial&team/testimonials-5.jpg" class="testimonial-img" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/testimonials-5.jpg'}" class="testimonial-img" alt="">
               <h3>John Larson</h3>
               <h4>Entrepreneur</h4>
             </div>
@@ -218,7 +222,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up">
             <div class="member-img">
-              <img src="assets/img/testimonial&team/epale.jpg" class="img-fluid" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/epale.jpg'}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -236,7 +240,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="100">
             <div class="member-img">
-              <img src="assets/img/testimonial&team/adj1.jpg" class="img-fluid" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/adj1.jpg'}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -254,7 +258,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="200">
             <div class="member-img">
-              <img src="assets/img/testimonial&team/steph1.jpg" class="img-fluid" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/steph1.jpg'}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -272,7 +276,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="300">
             <div class="member-img">
-              <img src="assets/img/testimonial&team/bidzanna.jpg" class="img-fluid" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/bidzanna.jpg'}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -290,7 +294,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="300">
             <div class="member-img">
-              <img src="assets/img/testimonial&team/powell1.jpg" class="img-fluid" alt="">
+              <img th:src="@{'/assets/img/testimonial&team/powell1.jpg'}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -381,8 +385,6 @@
 
   <!-- ======= Footer ======= -->
 <th:block th:replace="fragments/_footer.html::footer"></th:block>
-
-
 
 <th:block th:replace="fragments/_js.html::js"></th:block>
 </body>
