@@ -73,7 +73,6 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                
                             <div th:each="productDto : ${productDtos}" class="col-lg-4 col-md-6 portfolio-item filter-app">
                                 <img th:src="@{'/assets/img/testimonial&team/testimonials-1.jpg'}" class="img-fluid" alt="">
                                 <div class="portfolio-info">
@@ -83,7 +82,6 @@
                                     <a th:href="'/detail?reference=' + ${productDto.reference}" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>    
