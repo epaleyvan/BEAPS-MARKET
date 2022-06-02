@@ -31,6 +31,8 @@ public class UserDto {
 
     private Set<AddressDto> addressDtos = new HashSet<AddressDto>();
 
+    private Set<ShoppingListDto> shoppingListDtos = new HashSet<ShoppingListDto>();
+
     private Set<DeliveryDto> deliveryDtos = new HashSet<DeliveryDto>();
 
     private Set<PaymentDto> paymentDtos = new HashSet<PaymentDto>();

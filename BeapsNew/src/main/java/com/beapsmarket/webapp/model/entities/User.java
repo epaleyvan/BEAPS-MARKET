@@ -51,6 +51,9 @@ public class User {
     private Set<Address> addresses = new HashSet<Address>();
 
     @OneToMany(mappedBy = "user")
+    private Set<ShoppingList> shoppingLists = new HashSet<ShoppingList>();
+
+    @OneToMany(mappedBy = "user")
     private Set<Delivery> deliveries = new HashSet<Delivery>();
 
     @OneToMany(mappedBy = "user")
