@@ -16,6 +16,7 @@ body .sidebar {
   width: 20%;
   background: #f9cabc;
   height: 100%;
+  border-right: 3px solid #fff;
 }
 
 body .sidebar .logo {
@@ -73,11 +74,11 @@ body .dash {
 body .dash .up {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (2fr)[3];
-      grid-template-columns: repeat(3, 2fr);
+  -ms-grid-columns: (2fr)[4];
+      grid-template-columns: repeat(4, 2fr);
   -webkit-column-gap: 35px;
           column-gap: 35px;
 }
@@ -103,23 +104,37 @@ body .dash .up .stats:nth-child(3) {
   background: #f6eded;
 }
 
-body .dash .up .stats .box {
+body .dash .up .stats a {
+  text-decoration: none;
+  color: #000;
+}
+
+body .dash .up .stats a .box {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-body .dash .up .stats .box .number {
+body .dash .up .stats a .box .number {
   position: absolute;
   top: 10%;
   left: 20%;
   font-size: 2em;
 }
 
-body .dash .up .stats .box .description {
+body .dash .up .stats a .box .description {
   position: absolute;
   bottom: 10%;
   right: 15%;
   font-size: 1em;
+}
+
+body .dash .down {
+  height: 70vh;
+  width: 100%;
+  background: url("dash.png");
+  background-size: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=dashboard.css.map */
