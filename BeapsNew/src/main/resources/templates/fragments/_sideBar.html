@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org" >
+<th:block th:fragement="sideBar">
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <img th:src="@{/assets/img/logo.png}" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a th:href="@{/admin/dashboard}">Utilisateurs</a></li>
+                <li><a th:href="@{/admin/dashboard/user}">Produits</a></li>
+                <li><a th:href="@{/admin/dashboard/product}">Livraisons</a></li>
+            </ul>
+        </nav>
+    </div>
+</th:block>

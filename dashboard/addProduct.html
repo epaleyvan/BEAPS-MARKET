@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaps-Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="addUser.html">Utilisateurs</a></li>
+                <li><a href="addProduct.html">Produits</a></li>
+                <li><a href="">Livraisons</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="dash">
+        <h2>Enregistrement d'un produit</h2>
+        <div class="userContent">
+            <form action="">
+                <div class="form-content">
+                    <input type="text" name="productRef" id="" placeholder="Référence">
+                    <input type="text" name="productName" id="" placeholder="Désignation">
+
+                </div>
+                <div class="form-content">
+                    <textarea name="productDescription" id="" placeholder="description..."></textarea>
+                    <input type="text" name="productPrice" id="" placeholder="prix unitaire">
+                </div>
+                
+                <div class="form-content">
+                    <select name="productCategories" id="">
+                        <option value="">Categorie 1</option>
+                        <option value="">Categorie 2</option>
+                        <option value="">Categorie 3</option>
+
+                    </select>
+                </div>
+                
+            </form>
+            <button type="submit">Enregistrer</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
