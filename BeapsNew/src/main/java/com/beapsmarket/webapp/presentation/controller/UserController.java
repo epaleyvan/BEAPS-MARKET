@@ -27,7 +27,9 @@ public class UserController {
 
     @GetMapping("/chart")
     public String showAllShoppingList(@RequestParam(name = "username") String username, Model model){
+        System.out.println(iUser.findUserByUsername(username));
         Set<ShoppingListDto> shoppingListDtos = iUser.findUserByUsername(username).getShoppingListDtos();
+        System.out.println(shoppingListDtos);
         model.addAttribute("shoppingListDtos", shoppingListDtos);
         return "chart";
     }

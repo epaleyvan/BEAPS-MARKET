@@ -25,11 +25,11 @@ public class ShoppingList {
     private String reference;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "idpayment", nullable = false)
+    @JoinColumn(name = "idpayment")
     private Payment payment;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "iddelivery", nullable = false)
+    @JoinColumn(name = "iddelivery")
     private Delivery delivery;
 
     @ManyToOne(optional = false)
