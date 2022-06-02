@@ -11,5 +11,4 @@ public interface IUser {
     UserDto findUserByEmail(String string);
     int updateUser(UserDto userDto);
     int deleteUserByEmail(String email);
-    int deleteUser(UserDto userDto);
 }

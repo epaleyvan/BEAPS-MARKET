@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api/beapsmarket/address")
+@RequestMapping("/api/address")
 @Slf4j
 public class AddressRestController {
     @Autowired
@@ -37,6 +37,11 @@ public class AddressRestController {
     @GetMapping("/{code}/data")
     public ResponseEntity<AddressDto> getAddressByCode(@PathVariable int code) {
         return ResponseEntity.ok(iAddress.findAddressByCode(code));
+    }
+
+    @GetMapping("/{code}/delete")
+    public  void deleteAddress(@PathVariable int code){
+        iAddress.findAddressByCode(code);
     }
 
 }
