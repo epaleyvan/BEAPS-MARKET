@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr-FR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaps-Dashboard</title>
+    <link rel="stylesheet" th:href="@{/assets/css/dashboard.css}">
+</head>
+<body>
+<div class="sidebar">
+
+    <div class="logo">
+        <img th:src="@{/assets/img/logo.png}" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a th:href="@{/admin/dashboard}">Utilisateurs</a></li>
+            <li><a th:href="@{/admin/dashboard/user}">Produits</a></li>
+            <li><a th:href="@{/admin/dashboard/product}">Livraisons</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <div class="dash">
+        <h2>Enregistrement d'un produit</h2>
+        <div class="userContent">
+            <form action="">
+                <div class="form-content">
+                    <input type="text" name="productRef" placeholder="Référence">
+                    <input type="text" name="productName" placeholder="Désignation">
+
+                </div>
+                <div class="form-content">
+                    <textarea name="productDescription" placeholder="description..."></textarea>
+                    <input type="text" name="productPrice" placeholder="prix unitaire">
+                </div>
+                
+                <div class="form-content">
+                    <select name="productCategories">
+                        <option value="">Categorie 1</option>
+                        <option value="">Categorie 2</option>
+                        <option value="">Categorie 3</option>
+
+                    </select>
+                </div>
+                
+            </form>
+            <button type="submit">Enregistrer</button>
+
+        </div>
+    </div>
+
+</body>
+</html>

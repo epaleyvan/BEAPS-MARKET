@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaps-Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="addUser.html">Utilisateurs</a></li>
+                <li><a href="addProduct.html">Produits</a></li>
+                <li><a href="">Livraisons</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="dash">
+        <h2>Enregistrement d'un utilisateur</h2>
+        <div class="userContent">
+            <form action="">
+                <div class="form-content">
+                    <input type="text" name="userName" id="" placeholder="Nom">
+                    <input type="text" name=userSurname" id="" placeholder="Prenom">
+
+                </div>
+                <div class="form-content">
+                    <input type="text" name="userPhone" id="" placeholder="téléphone">
+                    <select name="userType" id="">
+                        <option value="Customer">Customer</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="DeliveryMan">DeliveryMan</option>
+
+                    </select>
+                </div>
+                <div class="form-content">
+                    <input type="email" name="userEmail" id="" placeholder="Email">
+                    <input type="password" name="uerPassword" id="" placeholder="Mot de passe">
+                </div>
+                
+            </form>
+            <button type="submit">Enregistrer</button>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -227,7 +227,6 @@ div.margin-bottom{
 	height: 80vh;
 	display: flex;
 	justify-content: space-around;
-	background-color: #DF6B48;
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 0 10%;
@@ -235,8 +234,7 @@ div.margin-bottom{
 }
 
 .login-container .left{
-	/* position: relative; */
-	background-color: #55df48;
+	position: relative;
 	height: 80%;
 }
 .login-container .left p{
@@ -247,8 +245,7 @@ div.margin-bottom{
 	color: #fff !important;
 }
 .login-container .right{
-	/* position: relative; */
-	background-color: #4870df;
+	position: relative;
 	height: 80%;
 }
 .login-container .right .Box{
@@ -278,11 +275,9 @@ div.margin-bottom{
 .login-container .right .account input,.login-container .right .account span{
 	font-size: 13px;
 }
-.login-container .right .Box input,.login-container .right .account input[type="checkbox"]{
-	width: 10%;
-}
 
-.login-container .right .Box button,.Box input,.login-container .right .account button{
+
+.login-container .right button{
 	margin-top: 15px;
 	background: transparent;
 	border: 2px solid #413152;
