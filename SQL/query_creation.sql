@@ -99,3 +99,7 @@ INSERT INTO category(reference, name) VALUES
     ('sugar', 'Sucres & Produits sucrés'),
     ('drink', 'Boissons');
     
+INSERT INTO product(reference, name, unitprice, description, idcategory) VALUES
+	('MI001', 'Dolait', 100, 'Vendu uniquement en paquet. Sachet de lait caillé', 1),
+    ('ME001', 'Filet de boeuf', 1250, 'Vendu en 1/2Kg. Viande cértifié halal', 1),
+	('LE001', 'Banane mûr', 125, 'Banane bien ferme, mûr et cultivés dans la région de l\'ouest du Cameroun', 4);

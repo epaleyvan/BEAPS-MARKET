@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="fr">
 
 <head>
     <title>BEAPS MARKET | Liste des produits</title>
@@ -75,12 +75,12 @@
                         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                 
                             <div th:each="productDto : ${productDtos}" class="col-lg-4 col-md-6 portfolio-item filter-app">
-                                <img th:src="${'assets/img/portfolio/'}" class="img-fluid" alt="">
+                                <img th:src="@{'/assets/img/testimonial&team/testimonials-1.jpg'}" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h4 th:text="${productDto.name}">Nom produits</h4>
                                     <p th:text="${productDto.unitprice} + ' F CFA' ">Prix produits</p>
                                     <a th:href="@{/}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ajouter dans ma liste"><i class="bx bx-plus bx-tada-hover"></i></a>
-                                    <a th:href="@{'/detail?reference=' + ${productDto.reference}" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
+                                    <a th:href="'/detail?reference=' + ${productDto.reference}" class="details-link" title="Plus de détails"><i class="bx bx-show bx-tada-hover"></i></a>
                                 </div>
                             </div>
 
