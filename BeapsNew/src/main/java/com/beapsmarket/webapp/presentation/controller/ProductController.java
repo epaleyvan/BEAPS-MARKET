@@ -30,10 +30,10 @@ public class ProductController {
     }
 
     @GetMapping("/detail")
-    public String pageDetail(@RequestParam(name = "numero") String numero , Model model){
-        ProductDto productDto = iProduct.searchProductByReference(numero);
-        model.addAttribute("productDto",productDto);
-        return "product_details";
+    public String pageDetail(@RequestParam(name = "reference") String reference , Model model){
+        ProductDto productDto = iProduct.searchProductByReference(reference);
+        model.addAttribute("productDto", productDto);
+        return "product__details";
     }
 
     @GetMapping("/supprimerproduits")

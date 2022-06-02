@@ -20,10 +20,10 @@ public class ShoppingListcontroller {
     @Autowired
     IShoppingList iShoppingList;
 
-    /*@GetMapping("/listshoppingLists")
+    @GetMapping("/listshoppingLists")
     public String chartpage(Model model){
-        Set<ShoppingListDto> shoppingListDtos =iShoppingList.istShoppingList();
-        model.addAttribute("shoppinglistDtos",shoppingListDtos);
+        //Set<ShoppingListDto> shoppingListDtos =iShoppingList.searchShoppingListByReference();
+        //model.addAttribute("shoppinglistDtos",shoppingListDtos);
         return "chart";
     }
     //revoir cette methode
@@ -51,7 +51,7 @@ public class ShoppingListcontroller {
 
 
         //Ecrire la methode update
-    }*/
+    }
 
 
 
