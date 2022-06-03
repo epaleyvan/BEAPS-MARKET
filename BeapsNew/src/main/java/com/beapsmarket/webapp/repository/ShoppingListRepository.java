@@ -3,7 +3,7 @@ package com.beapsmarket.webapp.repository;
 import com.beapsmarket.webapp.model.entities.ShoppingList;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ShoppingListRepository extends JpaRepository<ShoppingList, Long> {
+public interface ShoppingListRepository extends JpaRepository<ShoppingList, Integer> {
 
     ShoppingList findByReference(String string);
 

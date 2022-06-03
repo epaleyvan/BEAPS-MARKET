@@ -24,6 +24,11 @@ public class CategoryServiceImpl implements ICategory{
     }
 
     @Override
+    public CategoryDto findCategoryByReference(String reference) {
+        return categoryMapper.toDto(categoryRepository.findByReference(reference));
+    }
+
+    @Override
     public Set<CategoryDto> findAllCategory() {
         return categoryRepository.findAll().stream().map(categoryMapper::toDto).collect(Collectors.toSet());
     }

@@ -25,9 +25,7 @@ public class UserController {
         return "login";
     }
 
-<<<<<<< HEAD
 
-=======
     @GetMapping("/chart")
     public String showAllShoppingList(@RequestParam(name = "username") String username, Model model){
         System.out.println(iUser.findUserByUsername(username));
@@ -36,5 +34,5 @@ public class UserController {
         model.addAttribute("shoppingListDtos", shoppingListDtos);
         return "chart";
     }
->>>>>>> 59c6c8b386be48942b9344873059606619765477
+
 }

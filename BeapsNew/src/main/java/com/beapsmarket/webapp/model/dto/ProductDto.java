@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,7 +24,8 @@ public class ProductDto {
 
     private CategoryDto categoryDto;
 
-    private Set<ImageDto> imageDtos = new HashSet<ImageDto>();
+
+    private Set<ImageDto> imageDtos = new TreeSet<ImageDto>();
 
     private Set<ShoppingListDto> shoppingListDtos = new HashSet<ShoppingListDto>();
 }

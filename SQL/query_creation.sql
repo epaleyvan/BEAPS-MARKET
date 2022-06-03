@@ -104,15 +104,15 @@ INSERT INTO product(reference, name, unitprice, description, idcategory) VALUES
     ('ME001', 'Filet de boeuf', 1250, 'Vendu en 1/2Kg. Viande cértifié halal', 1),
 	('LE001', 'Banane mûr', 125, 'Banane bien ferme, mûr et cultivés dans la région de l\'ouest du Cameroun', 4);
     
-    ALTER TABLE user CHANGE phone phone BIGINT UNSIGNED NOT NULL;
+ALTER TABLE user CHANGE phone phone BIGINT UNSIGNED NOT NULL;
     
 INSERT INTO user(name, surname, gender, phone, type, email, username, password) VALUES
 	('TOTO', 'Junior', 'Male', 655787878, 'Customer', 'totojunior@gmail.com', 'toto_junior', 'toto'),
 	('TATA', 'Christelle', 'Female', 651787878, 'Customer', 'tatachristelle@gmail.com', 'tata_christelle', 'tata'),
 	('TITOUNE', 'Yves', 'Male', 654787878, 'Customer', 'titouneyves@gmail.com', 'titoune_yves', 'titoune');
     
-    ALTER TABLE shopping_list CHANGE idpayment idpayment SMALLINT;
-	ALTER TABLE shopping_list CHANGE iddelivery iddelivery SMALLINT;
+ALTER TABLE shopping_list CHANGE idpayment idpayment SMALLINT;
+ALTER TABLE shopping_list CHANGE iddelivery iddelivery SMALLINT;
     
 INSERT INTO shopping_list(reference, iduser) VALUES
 	('TOT001', 1),
@@ -127,3 +127,16 @@ INSERT INTO product_shopping_list VALUES
     (2, 1),
     (3, 1),
 	(4, 2);
+
+INSERT INTO image(reference, name, url, idproduct) VALUE
+	('ME301', 'cover', '/assets/img/Products/meat/filet-cover.jpg', 3),
+    ('ME302', 'Filet-1', '/assets/img/Products/meat/filet-1.jpg', 3),
+    ('LE201', 'cover', '/assets/img/Products/meat/banane-cover.jpg', 2),
+    ('LE202', 'Banane-1', '/assets/img/Products/legume/banane-1.jpg', 2),
+    ('LE203', 'Banane-2', '/assets/img/Products/legume/banane-2.jpg', 2),
+    ('MI101', 'cover', '/assets/img/Products/milk/jogobella-cover.jpg', 1);
+
+ALTER TABLE product DROP COLUMN quantity_list;
+ALTER TABLE product CHANGE quantityList quantity_list SMALLINT UNSIGNED DEFAULT 0;
+
+DELETE FROM image;

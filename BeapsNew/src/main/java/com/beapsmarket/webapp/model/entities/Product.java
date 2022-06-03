@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Table(name = "product", indexes = {
         @Index(name = "reference", columnList = "reference", unique = true)
@@ -33,7 +34,7 @@ public class Product {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "quantityList")
+    @Column(name = "quantity_list")
     private Integer quantityList;
 
     @ManyToOne(optional = false)
@@ -41,7 +42,7 @@ public class Product {
     private Category category;
 
     @OneToMany(mappedBy = "product")
-    private Set<Image> images = new HashSet<Image>();
+    private Set<Image> images = new TreeSet<Image>();
 
     @ManyToMany(mappedBy = "products")
     private Set<ShoppingList> shoppingLists = new HashSet<ShoppingList>();

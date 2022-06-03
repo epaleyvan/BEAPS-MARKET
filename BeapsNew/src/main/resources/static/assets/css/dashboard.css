@@ -78,7 +78,7 @@ body .dash .up {
   height: 20vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (2fr)[4];
+  /*-ms-grid-columns: (2fr)[4];*/
       grid-template-columns: repeat(4, 2fr);
   -webkit-column-gap: 35px;
           column-gap: 35px;
@@ -137,7 +137,7 @@ body .dash .up .stats a .box .description {
 body .dash .down {
   height: 70vh;
   width: 100%;
-  background: url("dash.png");
+  background: url("../img/dash.png");
   background-size: 50%;
   background-position: center center;
   background-repeat: no-repeat;

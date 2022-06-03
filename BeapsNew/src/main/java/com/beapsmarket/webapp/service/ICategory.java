@@ -8,5 +8,7 @@ public interface ICategory {
 
     int saveCategory(CategoryDto categoryDto);
 
+    CategoryDto findCategoryByReference(String reference);
+
     Set<CategoryDto> findAllCategory();
 }
